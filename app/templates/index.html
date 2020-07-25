@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% import 'macros.html' as macro %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {% block styles%}
+        {{ super() }}
+            <link rel="stylesheet" href="{{url_for('static',filename='css/styles.css')}}">
+    {% endblock %}
+    {% block content %}
+    <div class="container blog">
+        <div class="jumbotron">
+            {% if current_user.is_authenticated%}
+                  <h1>Hello {{current_user.username}} </h1>
+                <h1>Welcome to The Inspired Lyrics Blog.</h1>
+                <p>Inspired by the transformation caused by good music to the soul.</p>
+            {% else %}
+                <h1>Hi there, Welcome to The Inpired Lyrics Blog</h1>
+                
+            {%endif%}
+        <hr>
+        <div class="container">
+
+            <div class="row">
+
+                <ul >
+                    <div class="card-columns mt-5">
+                        <div class="card bg-secondary">
+                          <div class="card-body text-center">
+                            <p class="card-text">
+                            <img src="https://i.pinimg.com/originals/6b/3b/90/6b3b905b09c49d9f60a50ce1d06fd164.jpg" width="300" height="310"></p>
+                            <p>Welcome to music inpiration world.Where we share blogs using lyrics from songs to motivate and inspire.</p>
+                          </div>
+                        </div>
+                        <div class="container">
+                            <h4 class="text-left">
+                                <a class="btn btn-primary" href="/admin/blog/new">
+                                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>Create a new blog</a>
+                            </h4>
+                        </div>
+                        
+                    {{ macro.displayBlogList (blogs) }}
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</div>
+    {% endblock %}
+
+</body>
+
+</html>
