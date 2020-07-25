@@ -1,7 +1,7 @@
 # THeLyricBlog
 This is a personal blogging website where you can create and share your opinions and  users can read and comment on them. Also, users will get daily updates of motivational quotes from music.
 
-## By [Margaret254](https://github.com/sheready/)
+## By [Stella Waithera](https://github.com/sheready/)
 
 ## Description
 This is a personal blogging website where you can create and share your opinions and  users can read and comment on them. Also, users will get daily updates of motivational quotes.
