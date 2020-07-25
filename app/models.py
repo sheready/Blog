@@ -87,8 +87,6 @@ class Blog(db.Model):
 
         db.session.commit()
 
-
-
 class Review(db.Model):
 
     __tablename__ = 'reviews'
