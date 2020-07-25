@@ -4,7 +4,7 @@ class Config:
     '''
     General configuration parent class
     '''
-    SQLALCHEMY_DATABASE_URI='postgresql+psycopg2://moringa:Access@localhost/myblogsite'
+    SQLALCHEMY_DATABASE_URI='postgresql+psycopg2://moringa:Access@localhost/blogsite'
    
     SECRET_KEY = '! \x06i\x85\xb0xSo\nmbW\xb6\xefT \xd0Dp'
     WTF_CSRF_ENABLED = True
@@ -13,7 +13,7 @@ class ProdConfig(Config):
     SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
     
 class TestConfig(Config):
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:Access@localhost/myblogsite'
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:Access@localhost/blogsite'
 
 class DevConfig(Config):
 
