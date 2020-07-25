@@ -6,7 +6,7 @@ This is a personal blogging website where you can create and share your opinions
 ## Description
 This is a personal blogging website where you can create and share your opinions and  users can read and comment on them. Also, users will get daily updates of motivational quotes.
 
-You can view the site at 
+You can view the site at https://myblogsites.herokuapp.com/
 
 ## User Stories
 These are the behaviours/features that the application implements for use by a user.
